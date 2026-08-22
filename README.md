@@ -1,16 +1,105 @@
-# React + Vite
+# GitHub Repository Explorer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive React application that allows users to search and explore GitHub repositories using the GitHub REST API.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* Search for GitHub repositories
+* Fetch live data from the GitHub REST API using the Fetch API
+* Debounced search queries for improved performance
+* Repository results displayed dynamically based on user input
+* Loading spinner while API requests are in progress
+* Error handling for failed API requests
+* Repository details including:
 
-## React Compiler
+  * Repository name
+  * Description
+  * Stars
+  * Forks
+  * Programming language
+* Direct links to GitHub repositories
+* Responsive design for desktop and mobile devices
+* Interactive hover effects and polished UI
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Technologies Used
 
-## Expanding the ESLint configuration
+* React
+* JavaScript
+* Vite
+* Fetch API
+* GitHub REST API
+* CSS
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Project Structure
+
+```text
+src/
+├── components/
+│   ├── LoadingSpinner.jsx
+│   └── SearchBar.jsx
+├── services/
+│   └── githubApi.js
+├── App.css
+├── App.jsx
+├── index.css
+└── main.jsx
+```
+
+## How It Works
+
+1. The user enters a repository search term.
+2. The application waits briefly using debouncing before making an API request.
+3. The GitHub REST API fetches matching repositories.
+4. A loading spinner is displayed while the request is in progress.
+5. Repository results are displayed dynamically.
+6. If the request fails, a user-friendly error message is shown.
+
+## Getting Started
+
+Clone the repository and install the dependencies:
+
+```bash
+git clone https://github.com/YOUR-USERNAME/github-repository-explorer.git
+cd github-repository-explorer
+npm install
+npm run dev
+```
+
+The application will run locally through the Vite development server.
+
+## API
+
+This project uses the GitHub Repository Search API to retrieve repository data dynamically.
+
+## Deployment
+
+The application is deployed using Vercel.
+
+**Live Demo:** Add your Vercel deployment link here after deployment.
+
+## Codveda Task
+
+This project was created as part of the **Codveda Front-End Development Internship**.
+
+### Level 2 — Intermediate
+
+**Task 2: REST API Integration**
+
+The project demonstrates:
+
+* REST API integration using Fetch API
+* Dynamic content based on user input
+* Search functionality
+* Loading states
+* Error handling
+* Debounced search queries
+
+These align with the task objectives in the Codveda Front-End Development Task List.
+
+## Author
+
+**Titilope Adesodun**
+
+## License
+
+This project is for educational and internship purposes.
