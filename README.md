@@ -75,7 +75,7 @@ This project uses the GitHub Repository Search API to retrieve repository data d
 
 The application is deployed using Vercel.
 
-**Live Demo:** Add your Vercel deployment link here after deployment.
+**Live Demo:** https://github-repository-explorer-kappa.vercel.app/
 
 ## Codveda Task
 
